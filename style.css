@@ -1,0 +1,269 @@
+/*
+ Theme Name:   Basel Child
+ Description:  Basel Child Theme
+ Author:       XTemos
+ Author URI:   http://xtemos.com
+ Template:     basel
+ Version:      1.0.0
+ Text Domain:  basel-child
+*/
+
+
+/* Your customizations starts here */
+
+:root {
+    --primary: #D41F26;
+    --secondary: #333333;
+    --accent-1: #F4F4F4;
+    /* --accent-2: #e4e4e4; */
+    --dark: #000000;
+    --light: #ffffff;
+    --gray: #333333;
+    --dark-gray: #2d2d2d;
+    /* --primary-gradient: linear-gradient(90deg, hsla(3, 92%, 21%, 1) 0%, hsla(3, 93%, 39%, 1) 100%); */
+    /* --blue-gradient: linear-gradient(315deg, #7fcec5 0%, #14557b 74%); */
+    --ff-primary: "r" --ff-secondary: "Chivo", Arial, Helvetica, sans-serif;
+    --max-width: 1366px;
+    --text-h1: clamp(30px, 5vw, 60px);
+    --text-h2: clamp(25px, 2.5vw, 30px);
+    --text-h3: clamp(20px, 2.1vw, 25px);
+    --text-h4: clamp(18px, 1.667vw, 20px);
+    --text-p: 16px;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* General */
+
+.site-content {
+    margin-bottom: 0px;
+}
+
+section.section-md>.vc_row {
+    max-width: 1366px;
+    margin: auto !important;
+    width: 100%;
+}
+
+
+
+section.section-sm>.vc_row {
+    max-width: 1200px;
+    margin: auto !important;
+    width: 100%;
+}
+
+section.section-xs>.vc_row {
+    max-width: 850px;
+    margin: auto !important;
+    width: 100%;
+}
+
+
+/* Iframe Default */
+
+.iframe-container {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+}
+
+
+/*  Default Flex */
+
+.flex-default {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.display-1 * {
+    font-size: var(--text-h1) !important;
+    line-height: 1.2 !important;
+}
+
+.display-2 * {
+    font-size: var(--text-h2) !important;
+    line-height: 1.2 !important;
+}
+
+.display-3 * {
+    font-size: var(--text-h3) !important;
+    line-height: 1.2 !important;
+}
+
+.display-4 * {
+    font-size: var(--text-h4) !important;
+}
+
+p {
+    letter-spacing: 0.5px;
+    font-size: var( --text-p);
+}
+
+.ff-primary * {
+    font-family: var(--ff-primary) !important;
+}
+
+.ff-secondary * {
+    font-family: var(--ff-secondary) !important;
+}
+
+.ff-secondary .title {
+    font-weight: 500 !important;
+}
+
+
+/* Text Color */
+
+.text-primary * {
+    color: var(--primary);
+}
+
+.text-secondary * {
+    color: var(--secondary);
+}
+
+
+/* Title Color  */
+
+.basel-title-color-primary .title {
+    color: var(--primary);
+}
+
+.basel-title-color-alt .title {
+    color: var(--secondary);
+}
+
+.basel-title-color-white .title {
+    color: var(--light);
+}
+
+.basel-title-color-default .title,
+.basel-title-color-black .title {
+    color: var(--dark);
+}
+
+.color-scheme-light .wpb_wrapper p {
+    color: var(--light);
+}
+
+.color-scheme-dark .wpb_wrapper p {
+    color: var(--dark);
+}
+
+
+/*  Typography */
+
+.text-justify * {
+    text-align: justify;
+}
+
+.text-justify-center * {
+    text-align: justify;
+    text-align-last: center;
+}
+
+
+/*  Remove Psueodo */
+
+.remove-pseudo>::before,
+.remove-pseudo>::after {
+    display: none;
+}
+
+
+/* 
+Reversing Row on specific sizes
+
+*/
+
+@media only screen and (max-width: 990px) {
+    .reverse-md {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .reverse-sm {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .reverse-xs {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+/*  HB - Hide Below This Screen Sizes Will Be Use on Rows
+ * 
+ * hide-xs
+ * hide-sm
+ * hide-md
+ * 
+ * 
+ *  */
+
+.show-lg,
+.show-md,
+.show-sm,
+.show-xs {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hide-lg {
+        display: none;
+    }
+    .show-lg {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .hide-md {
+        display: none;
+    }
+    .show-md {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hide-sm {
+        display: none;
+    }
+    .show-sm {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .hide-xs {
+        display: none;
+    }
+    .show-xs {
+        display: block;
+    }
+}
